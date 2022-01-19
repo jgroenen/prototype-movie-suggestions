@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                background: black;
+                color: white;
+                font-family: Arial;
+            }
+            .sugg-box {
+                width: 400px;
+                height: 300px;
+                margin: auto;
+                background: white;
+                color: black;
+                margin-top: 100px;
+                background: url('https://a-static.besthdwallpaper.com/the-matrix-resurrections-neo-wallpaper-2560x1600-84244_7.jpg') center center no-repeat;
+                background-size: cover;
+                padding: 10px;
+            }
+            .sugg-info {
+                height: 220px;
+                width: 200px;
+                background: black;
+                opacity: 0.85;
+                border-radius: 5px;
+                color: white;
+            }
+            .sugg-buttons {
+                display: flex;
+                margin-top: 5px;
+            }
+            .sugg-buttons__button {
+                flex: 1;
+                height: 50px;
+                text-align: center;
+                line-height: 50px;
+                background: white;
+                margin: 10px;
+                cursor: pointer;
+            }
+            .sugg-info__title {
+                font-size: 1.6em;
+            }
+            .sugg-info__title,
+            .sugg-info__description,
+            .sugg-info__link {
+                margin: 5px;
+            }
+            .sugg-info__link a {
+                color: white;
+            }
+        </style>
+        <script
+        src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="sugg-box">
+            <div class="sugg-info">
+                <h1 class="sugg-info__title">The Matrix Resurrections</h1>
+                <p class="sugg-info__description">In een distopische toekomst maakt de computer de dienst uit.</p>
+                <p class="sugg-info__link"><a href="https://www.youtube.com/watch?v=nNpvWBuTfrc">Bekijk de trailer op youtube</a></p>
+            </div>
+            <div class="sugg-buttons">
+                <div class="sugg-buttons__button sugg-buttons__something-similar">ZOIETS</div>
+                <div class="sugg-buttons__button sugg-buttons__something-else">ANDERS</div>
+            </div>
+        </div>
+    </body>
+    <script>
+        var path = '';
+        $('.sugg-buttons__something-similar').click(function () {
+            path += '1';
+            // $.GET ... ?path=
+            console.log(path);
+        });
+        $('.sugg-buttons__something-else').click(function () {
+            path += '0';
+            // $.GET ... ?path=
+            console.log(path);
+        });
+    </script>
+</html>
